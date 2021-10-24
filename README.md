@@ -1,10 +1,8 @@
 ![](media/image1.png)
 ---
-
-#Cryptopunk and Meebit alike NFT Art Generator
-
--| written by: | Udit Sangule | ([*uditsangule@gmail.com*](mailto:uditsangule@gmail.com)[)]()|
-
+Cryptopunk and Meebit alike NFT Art Generator
+   written by: Udit Sangule([*uditsangule@gmail.com*](mailto:uditsangule@gmail.com)[)]()
+-----------------------------------------------------
 
 Introduction:
 =============
@@ -162,12 +160,13 @@ Flow chart:
 
 
 Method \#2 Machine Learning :
-==============================================================================================================
+==============================
 
 This approch again takes dataset given by cryptopunks with *punks.csv*
 and *punks.png*. You can also creating your own dataset via above CV
 method. We are taking Generative Adversarial Networks for generations of
 images out of given attributes and type fed as a list.
+
 ---------------------
 ![](media/image5.png)
 ---------------------
