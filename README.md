@@ -1,7 +1,8 @@
 ![](media/image1.png)
 ---
-#Cryptopunk and Meebit alike NFT Art Generator
-##written by:Udit Sangule([*uditsangule@gmail.com*](mailto:uditsangule@gmail.com)[)]()
+Cryptopunk and Meebit alike NFT Art Generator
+---
+|written by:|Udit Sangule |([*uditsangule@gmail.com*](mailto:uditsangule@gmail.com)[)]()|
 ---
 
 Introduction:
@@ -55,9 +56,9 @@ So the Attributes and types are decided, follow these steps:
     content introduction, the extra\_selector\_bits ( lets take +2 extra
     for each attribute).
 
-    ```selector\_bits = math.ceil( log2(total\_count\_per\_attribute) ) + (extra\_selector\_bits)
+```selector\_bits = math.ceil( log2(total\_count\_per\_attribute) ) + (extra\_selector\_bits)```
 
-    max\_bits += selector\_bits```
+    ```max\_bits += selector\_bits```
 
     For punks:
 
@@ -168,8 +169,11 @@ This approch again takes dataset given by cryptopunks with *punks.csv*
 and *punks.png*. You can also creating your own dataset via above CV
 method. We are taking Generative Adversarial Networks for generations of
 images out of given attributes and type fed as a list.
+---------------------
 ![](media/image5.png)
+---------------------
 ![](media/image6.png)
+---------------------
 
 Consider a typical Text-to-Image GAN network in which a Generator takes
 a vector input and generates a image , and a Discriminator which
