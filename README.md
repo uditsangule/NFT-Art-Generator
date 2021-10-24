@@ -1,9 +1,10 @@
 ![](media/image1.png)
 ---
-Cryptopunk and Meebit alike NFT Art Generator
----
-|written by:|Udit Sangule |([*uditsangule@gmail.com*](mailto:uditsangule@gmail.com)[)]()|
----
+
+#Cryptopunk and Meebit alike NFT Art Generator
+
+-| written by: | Udit Sangule | ([*uditsangule@gmail.com*](mailto:uditsangule@gmail.com)[)]()|
+
 
 Introduction:
 =============
@@ -56,9 +57,9 @@ So the Attributes and types are decided, follow these steps:
     content introduction, the extra\_selector\_bits ( lets take +2 extra
     for each attribute).
 
-```selector\_bits = math.ceil( log2(total\_count\_per\_attribute) ) + (extra\_selector\_bits)```
+```selector_bits = math.ceil( log2(total_count_per_attribute) ) + (extra_selector_bits)```
 
-    ```max\_bits += selector\_bits```
+```max_bits += selector_bits```
 
     For punks:
 
@@ -94,10 +95,8 @@ extra\_selector\_bits) )**
 
 1.  Assign the bit locations for each attributes in key with reference
     to future bits.
-
-Key\_bits (in order) =
-
-  ------- ------ ----- ------ ------ --------- ------ ------ ------- ------- ------
+ ------- ------ ----- ------ ------ --------- ------ ------ ------- ------- ------
+  Key\_bits (in order) =
   |Extra | Type | Hat | Hair | Eyes | Belmish | Nose | Ears | Mouth | Beard | Neck |
   |------|------|-----|------|------|---------|------|------|-------|-------|------|
   |  8   |  6   |  7  |  8   |  7   |   5     |  3   |   3  |   6   |  6    |  5   |
