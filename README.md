@@ -1,11 +1,7 @@
+![](media/image1.png)
 ---
-subtitle: |
-    written by:Udit Sangule
-    ([*uditsangule@gmail.com*](mailto:uditsangule@gmail.com)[)]()
-title: |
-    ![](media/image1.png){width="8.266666666666667in"
-    height="2.386111111111111in"}Cryptopunk and Meebit alike NFT Art
-    generator
+#Cryptopunk and Meebit alike NFT Art Generator
+##written by:Udit Sangule([*uditsangule@gmail.com*](mailto:uditsangule@gmail.com)[)]()
 ---
 
 Introduction:
@@ -59,11 +55,9 @@ So the Attributes and types are decided, follow these steps:
     content introduction, the extra\_selector\_bits ( lets take +2 extra
     for each attribute).
 
-    selector\_bits = math.ceil( log~2~(total\_count\_per\_attribute) )
+    ```selector\_bits = math.ceil( log2(total\_count\_per\_attribute) ) + (extra\_selector\_bits)
 
-    + (extra\_selector\_bits)
-
-    max\_bits += selector\_bits
+    max\_bits += selector\_bits```
 
     For punks:
 
@@ -103,8 +97,9 @@ extra\_selector\_bits) )**
 Key\_bits (in order) =
 
   ------- ------ ----- ------ ------ --------- ------ ------ ------- ------- ------
-  Extra   Type   Hat   Hair   Eyes   Belmish   Nose   Ears   Mouth   Beard   Neck
-  8       6      7     8      7      5         3      3      6       6       5
+  |Extra | Type | Hat | Hair | Eyes | Belmish | Nose | Ears | Mouth | Beard | Neck |
+  |------|------|-----|------|------|---------|------|------|-------|-------|------|
+  |  8   |  6   |  7  |  8   |  7   |   5     |  3   |   3  |   6   |  6    |  5   |
   ------- ------ ----- ------ ------ --------- ------ ------ ------- ------- ------
 
 The generator\_key has been designed to generate each image a unique
@@ -113,8 +108,8 @@ that no new image will get same generator key.Some combinations will be
 discarded as it doesnt contains value.
 
 With the current available data we can generate almost **\~ 68 Billion**
-(2^36^) images. And if we have sufficient attributes to fill all bits,
-we can generate **2 x 10^19\ ^** unique images.
+(2^36) images. And if we have sufficient attributes to fill all bits,
+we can generate **2 x 10^19** unique images.
 
 Now, Lets take a look at the methods to generate !
 
@@ -128,7 +123,7 @@ github([*link*](https://github.com/cryptopunksnotdead/punks.blocks)).
 Flow chart:
 -----------
 
-![](media/image4.png){width="4.705555555555556in" height="4.8875in"}
+![](media/image4.png)
 
  Algoritm:
 ----------
@@ -164,29 +159,17 @@ Flow chart:
 
 6.  Go to step no 1 for next generation.
 
-    1.  Conclusion :
-        ------------
 
-We can see this is a generic approach which is doesnt need any
-intelligence in generation. The main component here is the key for each
-image , which we have registered into database.
 
-This algorithm will generate all the possible images, However this
-algorithm will be slowed down later beacause most of the keys will be
-registerd into database and it will find difficult to get any new key in
-future. This mimic the unavailabity of NFT image in Future and thus, the
-Crypto-currency.
-
-Method \#2 Machine Learning :![](media/image5.png){width="3.2819444444444446in" height="3.5569444444444445in"}
+Method \#2 Machine Learning :
 ==============================================================================================================
 
 This approch again takes dataset given by cryptopunks with *punks.csv*
 and *punks.png*. You can also creating your own dataset via above CV
 method. We are taking Generative Adversarial Networks for generations of
 images out of given attributes and type fed as a list.
-
-![](media/image6.png){width="3.435416666666667in"
-height="3.5805555555555557in"}
+![](media/image5.png)
+![](media/image6.png)
 
 Consider a typical Text-to-Image GAN network in which a Generator takes
 a vector input and generates a image , and a Discriminator which
@@ -221,8 +204,7 @@ Training network
     1.  Architecture:
         -------------
 
-![](media/image7.png){width="5.511111111111111in"
-height="3.682638888888889in"}
+![](media/image7.png)
 
 Conclusion:
 -----------
